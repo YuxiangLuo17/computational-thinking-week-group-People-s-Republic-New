@@ -3,6 +3,7 @@ import maciej
 import bernardo
 import henning
 import janekl
+import haider
 
 def team_intro():
     print("This is Team YourTeamNameHere. We are:")
@@ -11,6 +12,7 @@ def team_intro():
     print(bernardo.my_name())
     print(henning.my_name())
     print(janekl.my_name())
+    print(haider.my_name())
 
 if __name__ == "__main__":
     team_intro()
