@@ -1,30 +1,15 @@
-"""
-Station 4
----------
-Fill in `solution_station_4` to implement the algorithm you infer from the station's sample inputs/outputs.
+import math
 
-Tips:
-- Keep the function pure (no prints, no I/O). 
-- Return the exact type expected in main.py (see asserts).
-- You may use built-in modules + numpy/pandas if helpful.
-"""
-from typing import *
+def solution_station_4(number: int) -> bool:
+    if number < 2:
+        return False
+    if number == 2:
+        return True
+    if number % 2 == 0:
+        return False
 
-
-def solution_station_4(x):
-    """
-    TODO: Implement Station 4's algorithm.
-
-    Parameters
-    ----------
-    x : Any
-        The station's input value.
-
-    Returns
-    -------
-    Any
-        The station's output value (see type expectations in main.py).
-    """
-    # Placeholder logic to keep the pipeline runnable.
-    # Replace this with the real algorithm once we decode it from the samples.
-    raise NotImplementedError("Implement station 4 once sample data is provided.")
+    limit = int(math.sqrt(number)) + 1
+    for i in range(3, limit, 2):
+        if number % i == 0:
+            return False
+    return True
